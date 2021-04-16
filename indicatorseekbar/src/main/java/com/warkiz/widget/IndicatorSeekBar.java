@@ -1274,6 +1274,13 @@ public class IndicatorSeekBar extends View {
         updateIndicator();
     }
 
+    public void showSeekBarProgress(Float progress) {
+        refreshThumbCenterXByProgress(progress);
+        setSeekListener(true);
+        invalidate();
+        updateIndicator();
+    }
+
     private boolean progressChange() {
         if (mIsFloatProgress) {
             return lastProgress != mProgress;
