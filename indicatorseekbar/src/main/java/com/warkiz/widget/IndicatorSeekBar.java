@@ -1281,6 +1281,12 @@ public class IndicatorSeekBar extends View {
         updateIndicator();
     }
 
+    public void hideSeekBarProgress() {
+        if (mIndicator != null) {
+            mIndicator.hide();
+        }
+    }
+
     private boolean progressChange() {
         if (mIsFloatProgress) {
             return lastProgress != mProgress;
